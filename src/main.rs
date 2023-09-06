@@ -7,8 +7,19 @@ fn main() {
     println!("Enter the first number: ");
     let x: f64 = input_parser();
 
+    if f64::is_nan(x) {
+        println!("Invalid input!");
+        return;
+    }
+
     println!("Enter the second number: ");
     let y: f64 = input_parser();
+
+
+    if f64::is_nan(y) {
+        println!("Invalid input!");
+        return;
+    }
 
     println!("List of operators:");
     println!("(1) Add");
@@ -46,7 +57,6 @@ fn input_parser() -> f64 {
     let x: f64 = match x.trim().parse() {
         Ok(num) => num,
         Err(_) => {
-            println!("Invalid input!");
             return f64::NAN;
         }
     };
