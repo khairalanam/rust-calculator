@@ -36,16 +36,11 @@ fn main() {
 
     let op: i32 = op as i32;
 
-    if op > 4 || op < 1 {
-        println!("Invalid selection");
-        return;
-    }
-
     match op {
-        1 => result = x + y,
-        2 => result = x - y,
-        3 => result = x * y,
-        4 => result = x / y,
+        1 => result = add(x, y),
+        2 => result = subtract(x, y),
+        3 => result = multiply(x, y),
+        4 => result = divide(x, y),
         _ => {
             println!("Invalid selection");
             return;
@@ -67,3 +62,20 @@ fn input_parser() -> f64 {
 
     return x;
 }
+
+fn add(x: f64, y: f64) -> f64 {
+    return x + y;
+}
+
+fn subtract(x: f64, y: f64) -> f64 {
+    return x - y;
+}
+
+fn multiply(x: f64, y: f64) -> f64 {
+    return x * y;
+}
+
+fn divide(x: f64, y: f64) -> f64 {
+    return x / y;
+}
+
