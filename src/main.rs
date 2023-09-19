@@ -64,18 +64,18 @@ fn input_parser() -> f64 {
 }
 
 fn add(x: f64, y: f64) -> f64 {
-    return x + y;
+    x + y
 }
 
 fn subtract(x: f64, y: f64) -> f64 {
-    return x - y;
+    x - y
 }
 
 fn multiply(x: f64, y: f64) -> f64 {
-    return x * y;
+    x * y
 }
 
 fn divide(x: f64, y: f64) -> f64 {
-    return x / y;
+    x / y
 }
 
