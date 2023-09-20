@@ -2,6 +2,7 @@ use std::io;
 
 fn main() {
     let result: f64;
+    let ops: [fn(f64, f64) -> f64; 4] = [add, subtract, multiply, divide];
 
     println!("Enter the first number: ");
     let x: f64 = input_parser();
