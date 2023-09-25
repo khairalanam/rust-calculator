@@ -37,16 +37,12 @@ fn main() {
 
     let op: i32 = op as i32;
 
-    match op {
-        1 => result = add(x, y),
-        2 => result = subtract(x, y),
-        3 => result = multiply(x, y),
-        4 => result = divide(x, y),
-        _ => {
-            println!("Invalid selection");
-            return;
-        }
+    if op > 4 || op < 1 {
+        println!("Invalid Selection!");
+        return;
     }
+
+    result = ops[(op - 1) as usize](x, y);
 
     println!("The result is: {}", result);
 }
